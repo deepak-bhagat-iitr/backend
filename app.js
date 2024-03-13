@@ -63,7 +63,7 @@ app.post("/signup", async (req, res) => {
     }
 
 })
-const port = process.env.PORT || 5000; // Use port specified in environment variable, or default to 3000
+const port = 5000; // Use port specified in environment variable, or default to 3000
 app.listen(port, () => {
     console.log("port running on 5000");
 })
