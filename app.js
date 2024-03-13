@@ -6,7 +6,7 @@ app.use(express.json())
 // app.use(express.urlencoded({ extended: true }))
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     methods: ['GET', 'POST'],
     credentials: true
 }));
@@ -63,8 +63,8 @@ app.post("/signup", async (req, res) => {
     }
 
 })
-
-app.listen(5000, () => {
-    console.log("port connected");
+const port = process.env.PORT || 3000; // Use port specified in environment variable, or default to 3000
+app.listen(port, () => {
+    console.log("port running on 3000");
 })
 
